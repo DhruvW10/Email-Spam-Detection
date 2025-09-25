@@ -1,0 +1,17 @@
+From: "Bank Security" <security@bank-secure.com>
+To: "User" <user@example.com>
+Subject: Urgent: Your Account Has Been Suspended!
+Date: Sun, 10 Mar 2024 14:30:00 -0500
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+    <p>Dear Customer,</p>
+    <p>We have detected unauthorized access to your online banking account. For security reasons, we have temporarily suspended your account.</p>
+    <p>To restore access, please verify your account immediately by clicking the link below:</p>
+    <p><a href="http://secure-bank-verification.com">Verify Your Account</a></p>
+    <p>Failure to do so within 24 hours will result in permanent suspension.</p>
+    <p>Best Regards,<br>Bank Security Team</p>
+</body>
+</html>

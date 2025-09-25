@@ -1,0 +1,17 @@
+From: "Support Team" <support@paypal-security.com>
+To: "User" <user@example.com>
+Subject: Your PayPal Account Needs Immediate Verification!
+Date: Mon, 11 Mar 2024 10:15:00 -0500
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+    <p>Dear Valued Customer,</p>
+    <p>We have noticed unusual activity on your PayPal account. To protect your funds, we require immediate verification.</p>
+    <p>Please confirm your identity by clicking the secure link below:</p>
+    <p><a href="http://paypal-security-check.com">Verify My Account</a></p>
+    <p>If you do not complete this verification within 12 hours, your account will be permanently locked.</p>
+    <p>Thank you for your prompt attention.<br>PayPal Security Team</p>
+</body>
+</html>

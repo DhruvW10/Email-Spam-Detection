@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeGuard Project</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome (Latest Version) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  /* Full-screen Background Image */
+  body {
+    background: url("static/background.jpeg") no-repeat center center fixed;
+    background-size: cover;
+  }
+  /* Container to hold the background */
+  body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Pseudo-element for background with opacity */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1; /* Adjust this value for transparency (0.1 - 1.0) */
+    z-index: -1;
+  }
+  /* Ensure text and content remain visible */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    gap: 30px; /* Increases space between title and input boxes */
+}
+
+  /* Lighten Text Boxes to Show Background */
+  .awareness-box {
+    background: rgba(255, 255, 255, 0.85); /* Slight transparency */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Ensuring text is readable on all backgrounds */
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Darker text for contrast */
+  }
+
+  .section-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444; /* Slightly darker than normal black */
+  }
+  body {
+    /* Awareness Section Styling */
+  .awareness-section {
+    background: #f8f9fa;
+    padding: 60px 20px;
+  }
+
+  .awareness-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .section-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Scroll Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+    /* Custom CSS */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .shield-icon {
+      margin-right: 10px;
+    }
+    .parent-container {
+      padding-top: 60px; /* Push input boxes down */
+    
+    }
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .feature-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      height: 100%;
+    }
+
+    .home-feature-card {
+      text-align: center;
+      padding: 3rem 2rem;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+
+    .home-feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-dark {
+      background-color: #111;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .input-section {
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+    }
+
+    .analysis-result {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .reason-list {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+
+    .reason-list li:before {
+      content: "•";
+      color: #dc3545;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .drop-area {
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      padding: 3rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      background-color: #f8f9fa;
+    }
+
+    .url-input {
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .text-danger {
+      color: #dc3545;
+    }
+
+    .text-success {
+      color: #28a745;
+    }
+  /* Awareness Section Styling */
+  .awareness-section {
+    background: #f8f9fa;
+    padding: 60px 20px;
+  }
+
+  .awareness-box {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    text-align: center;
+  }
+
+  .awareness-image {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .section-title {
+    font-size: 28px; /* Increased size */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .section-text {
+    font-size: 18px; /* Increased size */
+    line-height: 1.8;
+  }
+
+  /* Scroll Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.email-header-container {
+    background: white; /* White background */
+    padding: 8px 15px; /* Spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 400px; /* Set width */
+    margin-right: 20px auto 50px auto; /* Center it horizontally */
+}
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-shield-alt shield-icon"></i> SafeGuard Project
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="home-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="url-link">URL Phishing Detection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="email-link">Email Spam Detection</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <!-- Home Page -->  
+    <div id="home-page">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="home-feature-card feature-card">
+            <img src="https://via.placeholder.com/80x80" alt="URL Phishing" class="feature-icon" id="url-icon" />
+            <h2 class="mb-4">URL Phishing Detection</h2>
+            <button class="btn btn-dark" id="explore-url">Explore Feature</button>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="home-feature-card feature-card">
+            <img src="https://via.placeholder.com/80x80" alt="Email Spam" class="feature-icon" id="email-icon" />
+            <h2 class="mb-4">Email Spam Detection</h2>
+            <button class="btn btn-dark" id="explore-email">Explore Feature</button>
+          </div>
+        </div>
+        <!-- Awareness Section -->
+<section class="awareness-section mt-5">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Importance of URL Phishing Detection -->
+      <div class="col-md-6">
+        <div class="awareness-box fade-in">
+          <h2 class="section-title">Why URL Phishing Detection is Crucial for Online Security?</h2>
+          <p class="section-text">
+            In today's digital world, cybercriminals use phishing websites to steal sensitive data such as 
+            login credentials, banking information, and personal details. These fake websites are often 
+            disguised as legitimate platforms, tricking users into providing confidential information.
+          </p>
+          <p class="section-text">
+            Why it matters? <br>
+            <i class="fas fa-shield-alt"></i> Protects against identity theft <br>
+            <i class="fas fa-exclamation-triangle"></i> Prevents unauthorized financial transactions <br>
+            <i class="fas fa-globe"></i> Ensures safer online browsing  
+          </p>
+          <p class="section-text">
+            By analyzing URLs before accessing them, users can stay ahead of cyber threats and prevent online fraud.
+          </p>
+        </div>
+      </div>
+
+      <!-- Importance of Email Spam Detection -->
+      <div class="col-md-6">
+        <div class="awareness-box fade-in">
+          <h2 class="section-title">Understanding the Significance of Email Spam Detection</h2>
+          <p class="section-text">
+            Every day, billions of spam emails flood inboxes worldwide, many containing malicious links, fake offers, or phishing scams. 
+            Attackers use these emails to spread malware, steal credentials, and trick users into financial fraud.
+          </p>
+          <p class="section-text">
+            How does it help? <br>
+            <i class="fas fa-lock"></i> Keeps inboxes free from harmful content <br>
+            <i class="fas fa-user-secret"></i> Protects against fraud and data breaches <br>
+            <i class="fas fa-virus"></i> Prevents malware infections from email attachments
+          </p>
+          <p class="section-text">
+            Using advanced spam detection mechanisms can significantly reduce cyber threats and enhance digital security.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+      </div>
+    </div>
+
+<!-- URL Phishing Detection Page -->
+<div id="url-page" style="display: none;">
+  <div class="feature-card">
+    <h2 class="mb-4">URL Phishing Detection</h2>
+    <div class="input-section">
+      <label for="url-input" class="form-label">Enter URL for Analysis:</label>
+      <input type="text" class="form-control" id="url-input" placeholder="https://example.com" />
+    </div>
+    <button class="btn btn-dark w-100" id="analyze-url">Analyze URL</button>
+    
+    <div class="analysis-result mt-3" id="url-result" style="display: none;">
+      <h3 class="mb-3">URL Analysis Result</h3>
+      <!-- Conclusion Message -->
+      <p id="conclusion-message" class="mt-2 fw-bold"></p>
+      <p id="url-status" class="fw-bold text-success">Awaiting analysis...</p>
+      <p id="url-details">
+        If a URL is unsafe, a detailed description of the phishing risks and indicators will be displayed here, explaining why the URL is deemed unsafe.
+      </p>
+    </div>
+    <!-- Add this button below the extracted features analysis table -->
+<button class="btn btn-dark w-100" id="show-feature-details" style="display: none;">Show Feature Details</button>
+
+<!-- Add this section to display detailed descriptions of each feature -->
+<div id="feature-details" class="mt-3" style="display: none;">
+    <h4 class="mb-3">Feature Details</h4>
+    <div id="feature-details-content"></div>
+</div>
+  </div>
+</div>
+
+
+    <!-- Email Spam Detection Page -->
+    <div id="email-page" style="display: none;">
+      <div class="email-header-container">
+        <h2 class="mb-4">Email Spam Detection</h2>
+    </div>
+    <div style="height: 30px;"></div> <!-- Spacer added here -->
+    <div class="input-container">
+        <!-- Input boxes go here -->
+    </div>            
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h3 class="mb-3">Direct Input</h3>
+            <div class="drop-area mb-3" id="drop-area">
+              <p>Drag and drop your EML file here</p>
+            </div>
+            <button class="btn btn-dark" id="upload-file">Upload File</button>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h3 class="mb-3">Manual Input</h3>
+            <div class="mb-3">
+              <label for="email-subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="email-subject" placeholder="Enter email subject" />
+            </div>
+            <div class="mb-3">
+              <label for="email-body" class="form-label">Email Body</label>
+              <textarea class="form-control" id="email-body" rows="5" placeholder="Type the email content here"></textarea>
+            </div>
+            <button class="btn btn-dark" id="analyze-email">Analyze Email</button>
+          </div>
+        </div>
+      </div>
+      <div class="feature-card mt-4" id="email-result" style="display: none;">
+        <!-- Content will be dynamically inserted here by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap & jQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Navigation links
+      $('#home-link, .navbar-brand').click(function(e) {
+        e.preventDefault();
+        showPage('home-page');
+      });
+
+      $('#url-link, #explore-url').click(function(e) {
+        e.preventDefault();
+        showPage('url-page');
+      });
+
+      $('#email-link, #explore-email').click(function(e) {
+        e.preventDefault();
+        showPage('email-page');
+      });
+
+      // URL Analysis
+      $('#analyze-url').click(function() {
+        let url = $('#url-input').val();
+        if (url) {
+          // Normally this would make an AJAX call to your backend
+          // For demo purposes, we'll just show the result
+          $('#url-result').fadeIn();
+        }
+      });
+
+      // Email Analysis
+      $('#analyze-email').click(function() {
+        const emailData = {
+            subject: $('#email-subject').val(),
+            body: $('#email-body').val()
+        };
+
+        // Show loading state
+        $(this).prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Analyzing...');
+
+        // Make API call
+        $.ajax({
+            url: '/analyze_email',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(emailData),
+            success: function(response) {
+                // Update result section
+                const resultDiv = $('#email-result');
+                const isSpam = response.classification === 'SPAM';
+                const statusClass = isSpam ? 'text-danger' : 'text-success';
+                
+                let resultHtml = `
+                    <h3 class="mb-3">${response.title}</h3>
+                    <p class="${statusClass} mb-2">Classification: ${response.classification}</p>
+                `;
+
+                // Add spam indicators if present
+                if (isSpam && Object.keys(response.spamIndicators).length > 0) {
+                    resultHtml += `
+                        <h4 class="mb-2">Spam Indicators Found:</h4>
+                        <ul class="reason-list">
+                    `;
+                    
+                    for (const [category, count] of Object.entries(response.spamIndicators)) {
+                        resultHtml += `<li>${category}: ${count} match${count > 1 ? 'es' : ''}</li>`;
+                    }
+                    
+                    resultHtml += `</ul>`;
+                }
+
+                // Add reasons if present
+                if (response.reasons && response.reasons.length > 0) {
+                    resultHtml += `
+                        <h4 class="mb-2">Analysis:</h4>
+                        <ul class="reason-list">
+                            ${response.reasons.map(reason => `<li>${reason}</li>`).join('')}
+                        </ul>
+                    `;
+                }
+
+                // Add recommendation
+                if (response.recommendation) {
+                    resultHtml += `<p class="mt-3">${response.recommendation}</p>`;
+                }
+
+                // Add analysis details
+                resultHtml += `
+                    <div class="mt-4">
+                        <h4 class="mb-2">Analysis Details</h4>
+                        <table class="table table-sm">
+                            <tr>
+                                <td>Base Threshold:</td>
+                                <td>${response.analysisDetails.baseThreshold}</td>
+                            </tr>
+                            <tr>
+                                <td>Final Threshold:</td>
+                                <td>${response.analysisDetails.finalThreshold}</td>
+                            </tr>
+                            <tr>
+                                <td>Spam Probability:</td>
+                                <td>${response.analysisDetails.spamProbability}</td>
+                            </tr>
+                        </table>
+                    </div>
+                `;
+
+                resultDiv.html(resultHtml).show();
+            },
+            error: function(xhr, status, error) {
+                console.error('Error details:', xhr.responseText);
+                alert('Error analyzing email: ' + error);
+            },
+            complete: function() {
+                // Reset button state
+                $('#analyze-email').prop('disabled', false).text('Analyze Email');
+            }
+        });
+      });
+      // File upload simulation
+      $('#upload-file').click(function() {
+        // Normally this would handle file upload
+        // For demo purposes, we'll just show the result
+        $('#email-result').fadeIn();
+      });
+
+      // Drop area functionality
+      const dropArea = document.getElementById('drop-area');
+      
+      ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+      });
+      
+      function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+      });
+      
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+      });
+      
+      function highlight() {
+        dropArea.style.borderColor = '#000';
+        dropArea.style.backgroundColor = '#e9ecef';
+      }
+      
+      function unhighlight() {
+        dropArea.style.borderColor = '#ccc';
+        dropArea.style.backgroundColor = '#f8f9fa';
+      }
+      
+      dropArea.addEventListener('drop', handleDrop, false);
+      
+      function handleDrop(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        
+        if (files.length > 0) {
+            const file = files[0];
+            if (file.name.endsWith('.eml')) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const emlContent = e.target.result;
+                    console.log("Reading EML file..."); // Debug log
+                    
+                    // Show loading state
+                    $('#upload-file').prop('disabled', true)
+                        .html('<span class="spinner-border spinner-border-sm"></span> Analyzing...');
+
+                    // Send EML content to server
+                    $.ajax({
+                        url: 'http://localhost:5000/analyze_eml',  // Make sure this matches your Flask server
+                        method: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({ emlContent: emlContent }),
+                        success: function(response) {
+                            console.log("Received response:", response); // Debug log
+                            
+                            // Update result section
+                            const resultDiv = $('#email-result');
+                            const isSpam = response.classification === 'SPAM';
+                            const statusClass = isSpam ? 'text-danger' : 'text-success';
+                            
+                            let resultHtml = `
+                                <h3 class="mb-3">${response.title}</h3>
+                                <p class="${statusClass} mb-2">Classification: ${response.classification}</p>
+                            `;
+
+                            // Add spam indicators if present
+                            if (isSpam && Object.keys(response.spamIndicators).length > 0) {
+                                resultHtml += `
+                                    <h4 class="mb-2">Spam Indicators Found:</h4>
+                                    <ul class="reason-list">
+                                `;
+                                
+                                for (const [category, count] of Object.entries(response.spamIndicators)) {
+                                    resultHtml += `<li>${category}: ${count} match${count > 1 ? 'es' : ''}</li>`;
+                                }
+                                
+                                resultHtml += `</ul>`;
+                            }
+
+                            // Add reasons if present
+                            if (response.reasons && response.reasons.length > 0) {
+                                resultHtml += `
+                                    <h4 class="mb-2">Analysis:</h4>
+                                    <ul class="reason-list">
+                                        ${response.reasons.map(reason => `<li>${reason}</li>`).join('')}
+                                    </ul>
+                                `;
+                            }
+
+                            // Add recommendation
+                            if (response.recommendation) {
+                                resultHtml += `<p class="mt-3">${response.recommendation}</p>`;
+                            }
+
+                            // Add analysis details
+                            resultHtml += `
+                                <div class="mt-4">
+                                    <h4 class="mb-2">Analysis Details</h4>
+                                    <table class="table table-sm">
+                                        <tr>
+                                            <td>Base Threshold:</td>
+                                            <td>${response.analysisDetails.baseThreshold}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Final Threshold:</td>
+                                            <td>${response.analysisDetails.finalThreshold}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Spam Probability:</td>
+                                            <td>${response.analysisDetails.spamProbability}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            `;
+
+                            resultDiv.html(resultHtml).show();
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error details:', {
+                                status: status,
+                                error: error,
+                                response: xhr.responseText
+                            });
+                            alert('Error analyzing EML file: ' + error);
+                        },
+                        complete: function() {
+                            // Reset button state
+                            $('#upload-file').prop('disabled', false).text('Upload File');
+                        }
+                    });
+                };
+                
+                reader.onerror = function(e) {
+                    console.error("Error reading file:", e);
+                    alert('Error reading file');
+                };
+                
+                reader.readAsText(file);
+            } else {
+                alert('Please upload an EML file');
+            }
+        }
+      }
+
+      // Helper function to show/hide pages
+      function showPage(pageId) {
+        $('#home-page, #url-page, #email-page').hide();
+        $('#' + pageId).fadeIn();
+      }
+
+      // Create SVG for URL icon
+      createUrlIcon();
+      
+      // Create SVG for Email icon
+      createEmailIcon();
+    });
+
+    // Create SVG for URL icon (green shield with key)
+    function createUrlIcon() {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", "0 0 100 100");
+      svg.setAttribute("width", "80");
+      svg.setAttribute("height", "80");
+      
+      // Shield
+      const shield = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      shield.setAttribute("d", "M50 10 L90 30 L90 60 C90 75 70 90 50 95 C30 90 10 75 10 60 L10 30 Z");
+      shield.setAttribute("fill", "#2ecc71");
+      shield.setAttribute("stroke", "#27ae60");
+      shield.setAttribute("stroke-width", "3");
+      
+      // Key
+      const key = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      key.setAttribute("d", "M40 50 C40 42 46 35 55 35 C64 35 70 42 70 50 C70 58 64 65 55 65 L55 75 L45 75 L45 65 L40 65 Z");
+      key.setAttribute("fill", "#111");
+      key.setAttribute("stroke", "#111");
+      key.setAttribute("stroke-width", "2");
+      
+      // Key hole
+      const keyhole = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      keyhole.setAttribute("cx", "55");
+      keyhole.setAttribute("cy", "50");
+      keyhole.setAttribute("r", "5");
+      keyhole.setAttribute("fill", "white");
+      
+      svg.appendChild(shield);
+      svg.appendChild(key);
+      svg.appendChild(keyhole);
+      
+      document.getElementById("url-icon").replaceWith(svg);
+      svg.classList.add("feature-icon");
+      svg.id = "url-icon";
+    }
+    
+    // Create SVG for Email icon (red shield with @ symbol)
+    function createEmailIcon() {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", "0 0 100 100");
+      svg.setAttribute("width", "80");
+      svg.setAttribute("height", "80");
+      
+      // Email shape
+      const email = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      email.setAttribute("d", "M20 30 L50 50 L80 30 L80 70 L20 70 Z");
+      email.setAttribute("fill", "#e74c3c");
+      email.setAttribute("stroke", "#c0392b");
+      email.setAttribute("stroke-width", "3");
+      
+      // Envelope flap
+      const flap = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      flap.setAttribute("d", "M20 30 L50 50 L80 30 L50 20 Z");
+      flap.setAttribute("fill", "#c0392b");
+      flap.setAttribute("stroke", "#c0392b");
+      flap.setAttribute("stroke-width", "2");
+      
+      svg.appendChild(email);
+      svg.appendChild(flap);
+      
+      document.getElementById("email-icon").replaceWith(svg);
+      svg.classList.add("feature-icon");
+      svg.id = "email-icon";
+    }
+    // URL Phishing Detection - Updated to Show Feature List
+// URL Phishing Detection
+$('#analyze-url').click(function() {
+    let url = $('#url-input').val();
+    if (url) {
+        $('#url-status').text('Analyzing...').removeClass('text-danger text-success').addClass('text-warning');
+
+        $.ajax({
+            url: '/analyze_url',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ url: url }),
+            success: function(response) {
+                const isPhishing = response.classification.includes("Phishing");
+                const statusClass = isPhishing ? 'text-danger' : 'text-success';
+
+                $('#url-status')
+                    .text(`Classification: ${response.classification}`)
+                    .removeClass('text-warning')
+                    .addClass(statusClass);
+
+                // Generate table HTML
+                let tableHtml = `
+                    <h4 class="mb-3">Extracted Features Analysis</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                response.features_table.forEach(row => {
+                    let descriptionClass = row.description.includes("⚠️") ? "text-danger" :
+                                           row.description.includes("✅") ? "text-success" :
+                                           "text-warning";
+                    tableHtml += `<tr>
+                                    <td>${row.feature}</td>
+                                    <td class="${descriptionClass}">${row.description}</td>
+                                  </tr>`;
+                });
+
+                tableHtml += `</tbody></table>`;
+
+                $('#url-details').html(tableHtml);
+                $('#url-result').fadeIn();
+            },
+            error: function(xhr) {
+                alert('Error analyzing URL: ' + xhr.responseText);
+            }
+        });
+    }
+});
+    $(document).ready(function() {
+        $('#analyze-url').click(function() {
+            let url = $('#url-input').val();
+            if (url) {
+                $('#url-status').text('Analyzing...').removeClass('text-danger text-success').addClass('text-warning');
+
+                $.ajax({
+                    url: '/analyze_url',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ url: url }),
+                    success: function(response) {
+                        const isPhishing = response.classification.includes("Phishing");
+                        const statusClass = isPhishing ? 'text-danger' : 'text-success';
+
+                        $('#url-status')
+                            .text(`Classification: ${response.classification}`)
+                            .removeClass('text-warning')
+                            .addClass(statusClass);
+
+                        // Generate table HTML
+                        let tableHtml = `
+                            <h4 class="mb-3">Extracted Features Analysis</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                        `;
+
+                        let featureDetailsHtml = ``;
+                        response.features_table.forEach(row => {
+                            let descriptionClass = row.description.includes("⚠️") ? "text-danger" :
+                                                   row.description.includes("✅") ? "text-success" :
+                                                   "text-warning";
+                            tableHtml += `<tr>
+                                            <td>${row.feature}</td>
+                                            <td class="${descriptionClass}">${row.description}</td>
+                                          </tr>`;
+
+                            // Append detailed feature information
+                            featureDetailsHtml += `<p><strong>${row.feature}:</strong> ${row.full_description}</p>`;
+                        });
+
+                        tableHtml += `</tbody></table>`;
+
+                        // Update results
+                        $('#url-details').html(tableHtml);
+                        $('#url-result').fadeIn();
+                        $('#show-feature-details').show();
+
+                        // Store feature details content
+                        $('#feature-details-content').html(featureDetailsHtml);
+
+                        // Show Conclusion
+                        $('#conclusion-message').html(`<div class="alert ${isPhishing ? 'alert-danger' : 'alert-success'}">${response.conclusion}</div>`);
+                    },
+                    error: function(xhr) {
+                        alert('Error analyzing URL: ' + xhr.responseText);
+                    }
+                });
+            }
+        });
+
+        // Toggle feature details on button click
+        $('#show-feature-details').click(function() {
+            $('#feature-details').toggle();
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    function fadeInOnScroll() {
+      let elements = document.querySelectorAll(".fade-in");
+      let windowHeight = window.innerHeight;
+
+      elements.forEach(function(element) {
+        let position = element.getBoundingClientRect().top;
+
+        if (position < windowHeight - 100) {
+          element.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll(); // Trigger once on load
+  });
+</script>
+  </script>
+</body>
+</html>

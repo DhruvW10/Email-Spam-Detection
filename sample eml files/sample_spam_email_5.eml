@@ -1,0 +1,693 @@
+Delivered-To: akashajaysingh1234@gmail.com
+Received: by 2002:a05:7301:650a:b0:14b:a71d:2963 with SMTP id qs10csp1076887dyb;
+        Sat, 15 Feb 2025 03:57:57 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHyrwBPOUg431OKZDWa56wsdaeG15oAOTS5IK+Jl/8mheH6RXoatoMFwqZgNZB+sLTaAodT
+X-Received: by 2002:ad4:5f0a:0:b0:6e4:4393:de7 with SMTP id 6a1803df08f44-6e66cc8951bmr43971976d6.2.1739620677362;
+        Sat, 15 Feb 2025 03:57:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1739620677; cv=none;
+        d=google.com; s=arc-20240605;
+        b=k45lLnx4AF8fuAiMbDPMI+AAmlY61ER/XpV27+9R42tBX7YUErCuUCVuVqg5wy+9kt
+         iJV8leKxzNTEDd3lBRuNGeS9Enz93c3B54v6VKmoQ89PM6Y/lUxc6gDVy4RwDVZkSbWM
+         R3Xur8dGLiif/CJvUpZ8NF69gOuAN/bzRSe7ydDBBRLPvqGpryJx+jFqi8Q6Ny32IYfz
+         pJaZOSiM5w3HYyoTXUVguqIOhHdR1X1y96qGFhqKPYR7nQ8+PD6UbyVOyhHex1QvWlbu
+         0BZyKfce0+9wOIfM4oP8vTIUkLN/wKDI9IUpZ1xE4aUcRU1t6ddU4K5X5Xz8CJk7K28+
+         MWog==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:feedback-id:xopeners_50152:list-unsubscribe
+         :list-unsubscribe-post:message-id:subject:reply-to:from:to:date
+         :dkim-signature:dkim-signature;
+        bh=VQnNtnHTqFtqYrpD7LA+oeuW8puagHRQyQOlx1iiJ9c=;
+        fh=5WyTYw7fFHSiyh1LiPi6iTYlh9oc2iq3I2GWg8ep240=;
+        b=Po4kVXyhMczCAm2rj5m+jvMfB00zPMTR6BsK66NQXf4RR4h+LI+KJ5srt60tbrN8cK
+         RyL698YhxSrJ477m5e4CatGgbS46dZ+Se8MINOGXfKHauEoDQ9Ep20QsFX4pVcR/Ew7V
+         dKzo9+m2HjL4GDsaUaT+50wMAOPEOoapxi4gEl+OUEKE7LXD6luLsdThx/Qzc5I/jN3i
+         RzlPjXgpBAPEi8wjq1y1cfCyByEM0R1CE54+I6uapovqgry5e45/p4948SlHrr3QiZ7D
+         MkiWcnCx0GJ18NzxiiQJu69tWZHbUP2ZdChUbWEzdBVEo+2ob4XvKnjL2mpsSRspwQup
+         R7bw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.kotak.in header.s=ncemm0516 header.b=fT2qgbeW;
+       dkim=pass header.i=@ncm14.com header.s=emm header.b=Kebg5fpq;
+       spf=pass (google.com: domain of campaign-kotakcustsmart-50152-81276001-65222194-i-e=gmail.com@mail.kotak.in designates 202.162.237.227 as permitted sender) smtp.mailfrom="campaign-kotakcustsmart-50152-81276001-65222194-i-e=gmail.com@mail.kotak.in";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=kotak.in
+Return-Path: <campaign-kotakcustsmart-50152-81276001-65222194-i-e=gmail.com@mail.kotak.in>
+Received: from sm.227.ncdelivery03.com (sm.227.ncdelivery03.com. [202.162.237.227])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6e65d9c5aefsi50936766d6.388.2025.02.15.03.57.57
+        for <akashajaysingh1234@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 15 Feb 2025 03:57:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of campaign-kotakcustsmart-50152-81276001-65222194-i-e=gmail.com@mail.kotak.in designates 202.162.237.227 as permitted sender) client-ip=202.162.237.227;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.kotak.in header.s=ncemm0516 header.b=fT2qgbeW;
+       dkim=pass header.i=@ncm14.com header.s=emm header.b=Kebg5fpq;
+       spf=pass (google.com: domain of campaign-kotakcustsmart-50152-81276001-65222194-i-e=gmail.com@mail.kotak.in designates 202.162.237.227 as permitted sender) smtp.mailfrom="campaign-kotakcustsmart-50152-81276001-65222194-i-e=gmail.com@mail.kotak.in";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=kotak.in
+DKIM-Signature: a=rsa-sha256; bh=VQnNtnHTqFtqYrpD7LA+oeuW8puagHRQyQOlx1iiJ9c=;
+ c=relaxed/relaxed; d=mail.kotak.in;
+ h=DKIM-Signature:Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe-Post:List-Unsubscribe:X-Mailer:X-Abuse-Reports-To:XOPENERS_50152:X-Mta-Source:X-Mta-Priority:Feedback-ID:MIME-Version:Content-Type;
+ s=ncemm0516; t=1739620668; v=1;
+ b=fT2qgbeWHQWyHFN3x38CAThSV7hmTvCmi/6X4gAPCEbGkd+6QL2DBqAW5s55/rVoGGzAc2aI
+ CB8bggBZYMDdsXpRv/YgfW0p80LX/T8DwzVHd/0sS0C7rRQpSnFK2Q1Aeq4D9L0B4unVfAiSAr2
+ 9lk+pZCfUpq3hzYmUHd8IgL8=
+DKIM-Signature: a=rsa-sha256; bh=VQnNtnHTqFtqYrpD7LA+oeuW8puagHRQyQOlx1iiJ9c=;
+ c=relaxed/relaxed; d=ncm14.com;
+ h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe-Post:List-Unsubscribe:X-Mailer:X-Abuse-Reports-To:XOPENERS_50152:X-Mta-Source:X-Mta-Priority:Feedback-ID:MIME-Version:Content-Type;
+ s=emm; t=1739620668; v=1;
+ b=Kebg5fpqW1s7IbNdyNzOLOSrIWKmZW32Zn5m28fhRhimwan6BtviOij/ZGLd3xeM+0D7QfYq
+ SUQDDzb7Fosn/8CR2jjTOh3HYxylWkueHkyP5A/GVTFhn7gmrW5t4QGzjIily5MQjpecrDDQQUu
+ 5iU39fV5IpM439aJsc1yKziU=
+Date: Sat, 15 Feb 2025 17:04:21 +0530
+To: akashajaysingh1234@gmail.com
+From: =?UTF-8?B?S290YWsgODEx?= <retailproducts@mail.kotak.in>
+Reply-To: =?UTF-8?B?S290YWsgODEx?= <retailproducts@mail.kotak.in>
+Subject: =?UTF-8?Q?=F0=9F=98=9FOh_no!_You_missed_earning_7%*p.a.?=
+Message-ID: <580442458665222194@mail.kotak.in>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://lnk.mail.kotak.in/vtrack?ul=VAxUClEBAQQZCE9VXgVFDABSA01DWQgEXgIGUAF0BAlVXV0YVF5cRGE1YB5Sc2MsamF/YSYofiAGXlEsci9edDpaIFcMXnJUGUUC&ml=WghUD1UACAEZCU8GA1EFUlhE&sl=IEUpezZMbWMZan5gSQhYD09VA11cHg0MQlJfTVxaH1Q=&clientid=50152&c=000>, <mailto:uns-kotakcustsmart-50152-81276001-65222194-i-a8b4239bd62469b2deb4233604a69ef4@mail.kotak.in?subject=Unsubscribe>
+X-Mailer: NetcoreCloud Mailer
+X-Abuse-Reports-To: abuse@netcorecloud.com
+XOPENERS_50152: [XOPENERS]
+X-Mta-Source: kotakcustsmart_50152
+X-Mta-Priority: 2
+Feedback-ID: 81276:50152:20250215170423:nczc
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_ee720abe5a00f0162a740ada542279eb"
+
+
+
+
+--b1_ee720abe5a00f0162a740ada542279eb
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+Kotak
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+in your Kotak811 A/c with ActivMoney…
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+Click Here
+
+ to see the web version
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+Higher Interest
+
+ 
+
+Double up on earnings and get up to 7% interest p.a on the amount booked as an ActivMoney FD
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+Withdraw Anytime
+
+ 
+
+Access your funds whenever you need with flexible FDs that can be withdrawn anytime you like
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+Shorter Maturity Period
+
+ 
+
+Receive interest in your savings a/c as FDs mature in 180 days and get auto-booked as per availability of funds
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+No Hidden Charges
+
+ 
+
+Say goodbye to fines and pay absolutely zero charges for premature withdrawal of FDs
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ How ActivMoney works 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Sweep out
+
+ 
+
+limit - ₹25,000
+
+ 
+
+
+ 
+
+FD is booked when your savings balance is above ₹25,000
+
+ 
+
+ 
+
+ 
+
+ActivMoney
+
+ 
+
+ Fixed Deposit
+
+ 
+
+
+ 
+
+FDs are booked in multiples of ₹5,000, i.e, an amount that can be divided by ₹5,000.
+
+ 
+
+ 
+
+ 
+
+Sweep in 
+
+ 
+
+limit - ₹20,000
+
+ 
+
+
+ 
+
+Suitable FDs are broken when your savings balance goes below ₹20,000
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+Call our Customer Support
+
+ 
+
+ at 
+
+ 
+
+
+1860 266 0811
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+In case you do not wish to receive any further marketing e-mails on your CRN ending with 3211, please 
+
+
+
+click here
+
+
+
+ to unsubscribe.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+--b1_ee720abe5a00f0162a740ada542279eb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Kotak
+</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body style="width: 100%; margin: 0; padding: 0; font-family: 'Manrope', sans-serif;">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse;">
+<span class="preheader" style="display:none;display: none !important">
+in your Kotak811 A/c with ActivMoney&hellip;
+</span>
+<tr>
+<td width="100%" valign="top" style="padding-top:0px">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="deviceWidth" id="deviceWidth" bgcolor="#fff" style="border-collapse: collapse;">
+<tr align="center" height="20">
+<td style="line-height:normal;">
+<a href="https://lnk.mail.kotak.in/vtrack?clientid=50152&ul=
+VAxUClEBAQQZCE9VXgVFDABSA01DWQgEXgIGUAF0BAlVXV0YVF5cRGE1YB5Sc2MsamF/YSYofiAGXlEsci9edDpaIFcMXnJUGUUC&ml=WghUD1UACAEZCU8GA1ICUFZE&sl=IEUlRDZjRGMobU9YWw8YCQBRDhpbXxICXR1dDUkE&pp=OWQ=&fl=Ck0SSBAKFx8ESVoaWwFCBw5KB0ddURQXU1BcTVZbDktCBx5GRVRHUVUVHBZcSA==&ext=bmM9dm0mbT04MTI3NiZ1PVtVTklRSURdJnd2aWQ9MDAx" >
+Click Here
+</a>
+to see the web version
+</td>
+</tr>
+<tr>
+<td align="center">
+<a style="outline: none; border: none;">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/logo.png" width="600" style=" display: block; ">
+</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://lnk.mail.kotak.in/vtrack?clientid=50152&ul=
+VAxUClEBAQQZCE9VXgVFDABSA01DWQgEXgIGUAF0BAlVXV0YVF5cRGE1YB5Sc2MsamF/YSYofiAGXlEsci9edDpaIFcMXnJUGUUC&ml=WghUD1UACAEZCU8FBlQBGA==&sl=IEUlRDZjRGMobU9YWw8YCQBRDhpbXxICXR1dDUkE&pp=0&fl=Ck0SSBAKFx8OTVhWVApdShFZBVEeXA8NXRx1LQ0FUg==&ext="  target="_blank">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/banner.png" width="600" style="display: block;">
+</a>
+</td>
+</tr>
+<tr>
+<td style=" height: 20px; ">
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/benefit.png" width="300" style="display: block;">
+</td>
+</tr>
+<tr>
+<td style=" height: 50px; ">
+</td>
+</tr>
+<tr>
+<td align="center">
+<table cellspacing="0" cellpadding="0" border="0" width="550">
+<tr>
+<td align="left" style="padding: 20px; border-right: 2px solid #dbe2e5; border-bottom: 2px solid #dbe2e5; width: 275px;" valign="top">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/icon1.png" width="30" height="51.5">
+<p style="margin: 0; padding: 0; height: 10px;">
+</p>
+<p style=" margin: 0; padding:0; font-size: 17px; font-weight: 800; color: #253844;">
+Higher Interest
+</p>
+<p style=" margin: 0; padding:0; font-size: 15px; color: #253844; font-weight: 500;">
+Double up on earnings and get up to 7% interest p.a on the amount booked as an ActivMoney FD
+</p>
+</td>
+<td align="left" style="padding: 20px; border-bottom: 2px solid #dbe2e5; width: 275px;" valign="top">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/icon2.png" width="50" height="51.5">
+<p style="margin: 0; padding: 0; height: 10px;">
+</p>
+<p style=" margin: 0; padding:0; font-size: 17px; font-weight: 800; color: #253844;">
+Withdraw Anytime
+</p>
+<p style=" margin: 0; padding:0; font-size: 15px; color: #253844; font-weight: 500;">
+Access your funds whenever you need with flexible FDs that can be withdrawn anytime you like
+</p>
+</td>
+</tr>
+<tr>
+<td align="left" style="padding: 20px; border-right: 2px solid #dbe2e5; width: 275px;" valign="top">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/icon3.png" width="50" height="51.5">
+<p style="margin: 0; padding: 0; height: 10px;">
+</p>
+<p style=" margin: 0; padding:0; font-size: 17px; font-weight: 800; color: #253844;">
+Shorter Maturity Period
+</p>
+<p style=" margin: 0; padding:0; font-size: 15px; color: #253844; font-weight: 500;">
+Receive interest in your savings a/c as FDs mature in 180 days and get auto-booked as per availability of funds
+</p>
+</td>
+<td align="left" style="padding: 20px; width: 275px;" valign="top">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/icon4.png" width="70" height="51.5">
+<p style="margin: 0; padding: 0; height: 10px;">
+</p>
+<p style=" margin: 0; padding:0; font-size: 17px; font-weight: 800; color: #253844;">
+No Hidden Charges
+</p>
+<p style=" margin: 0; padding:0; font-size: 15px; color: #253844; font-weight: 500;">
+Say goodbye to fines and pay absolutely zero charges for premature withdrawal of FDs
+</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style=" height: 50px; ">
+</td>
+</tr>
+<tr>
+<td align="center">
+<table cellspacing="0" cellpadding="0" border="0" width="550">
+<tr>
+<td align="center" colspan="3" style="padding: 10px; background-color: #557483; color: #ffffff; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+<h3 style="margin: 0; padding: 0;">
+How ActivMoney works 
+</h3>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" style="padding: 10px; border-right: 2px solid #dbe2e5; border-left: 2px solid #dbe2e5; border-bottom-left-radius: 10px; border-bottom: 2px solid #dbe2e5;">
+<p style="margin: 0; padding: 0; font-weight: 700; color: #253844; font-size: 16px;">
+Sweep out
+</p>
+<p style="margin: 0; padding: 0; font-weight: 700; color: #253844; font-size: 16px;">
+limit - &#8377;25,000
+</p>
+<p style="margin: 0; padding: 0; height: 4px;">
+</p>
+<p style="margin: 0; padding: 0; color: #253844; font-weight: 500; font-size: 15px;">
+FD is booked when your savings balance is above &#8377;25,000
+</p>
+</td>
+<td align="center" valign="top" style="padding: 10px 5px; border-right: 2px solid #dbe2e5; border-bottom: 2px solid #dbe2e5;">
+<p style="margin: 0; padding: 0; font-weight: 700; color: #253844; font-size: 16px;">
+ActivMoney
+</p>
+<p style="margin: 0; padding: 0;font-weight: 700; color: #253844; font-size: 16px;">
+Fixed Deposit
+</p>
+<p style="margin: 0; padding: 0; height: 4px;">
+</p>
+<p style="margin: 0; padding: 0; color: #253844; font-weight: 500; font-size: 15px;">
+FDs are booked in multiples of &#8377;5,000, i.e, an amount that can be divided by &#8377;5,000.
+</p>
+</td>
+<td align="center" valign="top" style="padding: 10px; border-bottom-right-radius: 10px; border-right: 2px solid #dbe2e5; border-bottom: 2px solid #dbe2e5;">
+<p style="margin: 0; padding: 0; font-weight: 700; color: #253844; font-size: 16px;">
+Sweep in 
+</p>
+<p style="margin: 0; padding: 0; font-weight: 700; color: #253844; font-size: 16px;">
+limit - &#8377;20,000
+</p>
+<p style="margin: 0; padding: 0; height: 4px;">
+</p>
+<p style="margin: 0; padding: 0; color: #253844; font-weight: 500; font-size: 15px;">
+Suitable FDs are broken when your savings balance goes below &#8377;20,000
+</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style=" height: 50px; ">
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/footer.png" width="600" style="display: block;">
+</td>
+</tr>
+<tr>
+<td style="background-color: #253943; height: 20px;">
+</td>
+</tr>
+<tr>
+<td align="center" style="background-color: #253943;">
+<img src="https://d1l8l3rp33cdzs.cloudfront.net/images/kotakcustsmart/templates/12102/contact.png" width="40" style="display: block; ">
+</td>
+</tr>
+<tr>
+<td style="background-color: #253943; height: 5px;">
+</td>
+</tr>
+<tr>
+<td align="center" style="background-color: #253943;">
+<p style="padding: 0; margin: 0; color: #ffffff; font-size: 14px;">
+Call our Customer Support
+</p>
+<p style="padding: 0; margin: 0; color: #ffffff; font-size: 14px;">
+at 
+<span style="font-weight: 700; font-size: 16px;">
+<a href="tel:1860 266 0811" target="_blank" style="display: inline-block; text-decoration: none; color: #ffffff;">
+<strong style="text-decoration: none; color: #ffffff;">
+1860 266 0811
+</strong>
+</a>
+</span>
+</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: #253943; height: 20px;">
+</td>
+</tr>
+<tr>
+<td height="normal" style="font-family:Arial; font-size:11px; text-align:center; line-height:14px; color:#333333">
+In case you do not wish to receive any further marketing e-mails on your CRN ending with 3211, please 
+<strong>
+<span class="droppable" id="click_here_unsub">
+<a href="https://lnk.mail.kotak.in/vtrack?clientid=50152&ul=
+VAxUClEBAQQZCE9VXgVFDABSA01DWQgEXgIGUAF0BAlVXV0YVF5cRGE1YB5Sc2MsamF/YSYofiAGXlEsci9edDpaIFcMXnJUGUUC&ml=WghUD1UACAEZCU8GA1ICUFlE&sl=IEUzRDZjRGMobU9YWw8YCQBRDhpbXxICXR1dDUkE&pp=0&fl=Ck0SSFkfF1wLUh1ZVA1aSgpXFlVbHg8NGVhbF1RfABFHQEJbVkNFFw==&ext=cD1zbXVuc3ViJm1pZD04MTI3NiZ1aWQ9W1VOSVFJRF0md3ZpZD0wMDE=" >
+click here
+</a>
+</span>
+</strong>
+to unsubscribe.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br/>
+<div></div><img border="0" src="https://lnk.mail.kotak.in/vtrack?clientid=50152&ul=
+VAxUClEBAQQZCE9VXgVFDABSA01DWQgEXgIGUAF0BAlVXV0YVF5cRGE1YB5Sc2MsamF/YSYofiAGXlEsci9edDpaIFcMXnJUGUUC&ml=WghUD1UACAEZCU8ESQ==&sl=IEUpRDZjRGMobU9YWw8YCQBRDhpbXxICXR1dDUkE&c=0000" >
+</body>
+</html>
+
+
+
+--b1_ee720abe5a00f0162a740ada542279eb--
+

@@ -1,0 +1,13 @@
+Legitimate URLs:
+https://www.southbankmosaics.com
+https://www.voicefmradio.co.uk
+https://www.sfnmjournal.com
+https://www.rewildingargentina.org
+https://www.globalreporting.org
+
+Phishing URLs:
+http://www.teramill.com
+http://www.f0519141.xsph.ru
+http://www.shprakserf.gq
+https://service-mitld.firebaseapp.com/
+http://www.kuradox92.lima-city.de

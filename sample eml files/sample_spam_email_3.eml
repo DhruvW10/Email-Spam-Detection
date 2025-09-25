@@ -1,0 +1,342 @@
+Delivered-To: akashajaysingh1234@gmail.com
+Received: by 2002:a05:7300:e787:b0:14b:a71d:2963 with SMTP id nx7csp98032dyb;
+        Wed, 26 Feb 2025 18:51:55 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IH0atHg40lS0oL1p5jPgQZANIzyZlI+N/pXMESTShhN4kBof16Mino4BgwGbTHekMJ6DUVf
+X-Received: by 2002:a05:6a00:99c:b0:730:91fc:f9ba with SMTP id d2e1a72fcca58-7347918da88mr14896340b3a.19.1740624715147;
+        Wed, 26 Feb 2025 18:51:55 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740624715; cv=none;
+        d=google.com; s=arc-20240605;
+        b=eS28LXKdqefxysAxTcqAMBEZzaLqibCLK+Kx6s6Xc3xBjeBQWyo3Ak69VLKQq8QJW+
+         G8Y2lnify1gDBsGal+G0DM+smCgs134wfouym3VlDM4goUqMbR9sAq1YIkHASYMtTP7H
+         Q2rG2a959fLVQ1d6+UjACOreBRcdX9gGAWsT+OsDo0zMPCLHMUxZ8YA1+l1U6F0BHRjC
+         gQ708uqaaZ5DqkOGsqho8XAw25hzuHBbEyt2k8Ggk9BLXZj7kQV2PIBPPpU70wIFv9J1
+         JUycxsykX2ZAlswprYY3lPLW95LV399K4JiwUCAF7HJE2w5s7/vmQzRbluZFB+wcQ7Y/
+         OXJw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:list-unsubscribe-post
+         :list-unsubscribe:mime-version:list-help:date:subject:to:from
+         :dkim-signature;
+        bh=H6JMkZt0CkmcR1zlzDbKe0/8O3NwLANFZLRr2QOFr58=;
+        fh=mJGTOH5rkZcWZ2p2DkSmZUNY5Zy+j6J9XU0sSYCTGz8=;
+        b=EGFJwUTvxXnPDs4uifZJKyvr5pSaiW2F/6oH++2A4rDWOb+iPi7wjEN7SYHthFtViI
+         N0zgKAFmGH/vOe+dLlG9ut7UWhgxuI22k0zVys+20NzrWs197Uk/CBDBENEve+yZ36TB
+         2tlEBsE7eo3c3buOLuPeDZyFj0INnR8bRD7pQ6EN02V7EDDk0JVpYq4sBgYnyoeaCe4p
+         qjJSfxm5dDN8YhPqx68dAlN3LL+Os/Dih/S+lt6YIxGE3UHrYfos89+hZet6XcetkhKE
+         6+3neNqmqin3X5V8NBOJ47hvMGP2ZJgIMNiUVGsXtCRh4lnIQRHRxmhxV4x0Rhc92m7C
+         7DIw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mk.microchip.email header.s=200608 header.b=wwYWrx2H;
+       spf=pass (google.com: domain of bounce-7739_html-189617921-20414-546011004-3546@bounce.s13.mc.pd25.com designates 128.245.247.110 as permitted sender) smtp.mailfrom=bounce-7739_HTML-189617921-20414-546011004-3546@bounce.s13.mc.pd25.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mk.microchip.email
+Return-Path: <bounce-7739_HTML-189617921-20414-546011004-3546@bounce.s13.mc.pd25.com>
+Received: from akz110.mta.exacttarget.com (akz110.mta.exacttarget.com. [128.245.247.110])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-734a006216fsi594418b3a.302.2025.02.26.18.51.53
+        for <akashajaysingh1234@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Feb 2025 18:51:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-7739_html-189617921-20414-546011004-3546@bounce.s13.mc.pd25.com designates 128.245.247.110 as permitted sender) client-ip=128.245.247.110;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mk.microchip.email header.s=200608 header.b=wwYWrx2H;
+       spf=pass (google.com: domain of bounce-7739_html-189617921-20414-546011004-3546@bounce.s13.mc.pd25.com designates 128.245.247.110 as permitted sender) smtp.mailfrom=bounce-7739_HTML-189617921-20414-546011004-3546@bounce.s13.mc.pd25.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mk.microchip.email
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=mk.microchip.email;
+ h=From:To:Subject:Date:List-Help:MIME-Version:List-Unsubscribe:
+ List-Unsubscribe-Post:Reply-To:Message-ID:Content-Type;
+ i=Marketing@mk.microchip.email;
+ bh=H6JMkZt0CkmcR1zlzDbKe0/8O3NwLANFZLRr2QOFr58=;
+ b=wwYWrx2HZuFGibUnD/6aXjHbVjXKl4zKG0JzewspHM14AqzynFWVcCHr6HRR/UdCB/Wi2r3W8IhO
+   0Q+mBCrNWttz8Pc0xnGLOoCmgzR/mdI2/C1Mhlq/nJkmOtUPTOxUNy/ZnCesxhuNei6wSSKqUcO1
+   RMf0cqFux8nuzjQruJs=
+Received: by akz110.mta.exacttarget.com id hnv9kk2fmd42 for <akashajaysingh1234@gmail.com>; Thu, 27 Feb 2025 02:36:57 +0000 (envelope-from <bounce-7739_HTML-189617921-20414-546011004-3546@bounce.s13.mc.pd25.com>)
+From: "Microchip Technology Inc." <Marketing@mk.microchip.email>
+To: <akashajaysingh1234@gmail.com>
+Subject: Empower Your Innovation at Tech Insights Asia 2025
+Date: Wed, 26 Feb 2025 20:36:57 -0600
+List-Help: <https://cl.s13.exct.net/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1NDYwMTEwMDQiLCJzIjoiMTg5NjE3OTIxIiwibGlkIjoiNzczOSIsImoiOiIyMDQxNCIsImpiIjoiMzU0NiIsImQiOiIxMzAwMDQifQ.OAkk-dKDbcS7kPNVSC6uL_7RSDHzEr4sY9PyAwvlG1Y>
+MIME-Version: 1.0
+x-messageKey: 1082123-1434215208-72386019
+X-Delivery: Transactional
+X-SFMC-Stack: 13
+x-job: 546011004_20414
+List-Unsubscribe: <https://mkpage.microchip.com/listUnsubscribeHeader/u/1082123/de79482560a0572cc628978ea6eda600d4fe8e9ff6a4197c9cd860852e2c2873/1434927162>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Report-Abuse-To: abuse@pd25.com
+Reply-To: Updates@mk.microchip.email
+Message-ID: <1d358ab1-629d-419b-a4bb-5063e0f5d4c2@iad4s13mta902.xt.local>
+Feedback-ID: 546011004:20414:128.245.247.110:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="PYTuDpPyhyJy=_?:"
+
+This is a multi-part message in MIME format.
+
+--PYTuDpPyhyJy=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Join us on March 25–26 for a two half-day live webinar series.
+
+If you cannot read this email, please click here https://mkpage.microchip.com/webmail/1082123/1434927162/de79482560a0572cc628978ea6eda600d4fe8e9ff6a4197c9cd860852e2c2873.
+
+https://mkpage.microchip.com/e/1082123/2025-02-26/2spy87/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+https://mkpage.microchip.com/e/1082123/com-event-TechInsightsAsia2025/2spy8b/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+Join our virtual series, Tech Insights Asia 2025, on March 25–26 for a two half-day live webinar series presented by our subject matter experts to empower your innovation and elevate your design to the next level.
+
+Explore our latest technologies in security, IoT, microcontrollers as well as SiC solutions. Our experts will be available to answer your questions during the Q&A session. No matter where you are in your design journey, be sure to take this opportunity to gain insights from this free and educational virtual series.
+
+View our schedule below and secure your spot today:
+
+Date
+
+Theme
+
+Time (IST)
+
+Topic
+
+Mar 25 (Tue)
+
+Security/IoT
+
+10:30 AM – 11:20 AM
+
+Enabling Industrial Edge Solutions with PolarFire® SoC FPGA and OPC UA Integration
+
+11:30 AM – 12:20 PM
+
+Simplify IoT Connectivity with Microchip Network Controllers
+
+Mar 26 (Wed)
+
+Enhancing Your Designs
+
+10:30 AM – 11:20 AM
+
+State-of-The-Art Secure Microcontrollers
+
+11:30 AM – 12:20 PM
+
+Jump Start Your DC Fast Charger Designs with mSiC™ Solutions
+
+* This webinar series will be available in India, ASEAN, Australia and New Zealand, please note the time difference to attend the webinar.
+
+Register Now
+
+https://mkpage.microchip.com/e/1082123/com-event-TechInsightsAsia2025/2spy8b/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+Microchip Technology Incorporated
+
+www.microchip.com
+
+https://mkpage.microchip.com/e/1082123/2025-02-26/2spy87/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+|  asia.inquiry@microchip.com
+
+mailto:asia.inquiry@microchip.com
+
+https://mkpage.microchip.com/e/1082123/microchiptechnology/2spy8f/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+https://mkpage.microchip.com/e/1082123/company-microchip-technology/2spy8j/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+https://mkpage.microchip.com/e/1082123/MicrochipTech/2spy8m/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+https://mkpage.microchip.com/e/1082123/user-MicrochipTechnology/2spy8q/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+https://mkpage.microchip.com/e/1082123/2025-02-26/2spy8t/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+This email is sent to you by Microchip Technology. The Microchip name and logo, the Microchip logo and PolarFire are registered trademarks of Microchip Technology Incorporated in the U.S.A. and other countries. mSiC is a trademark of Microchip Technology Incorporated in the U.S.A. and other countries. All other trademarks mentioned herein are the property of their respective companies. ©2025 Microchip Technology Inc. and its subsidiaries. All rights reserved. Microchip Technology HK Ltd. | 3707-14, Tower 6, The Gateway, Harbour City | Hong Kong.
+
+Update Email Preferences
+
+https://mkpage.microchip.com/e/1082123/l-1082123-2024-12-20-2sdh5g/2spy8x/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+| Unsubscribe
+
+https://mkpage.microchip.com/unsubscribeConfirm/1082123/de79482560a0572cc628978ea6eda600d4fe8e9ff6a4197c9cd860852e2c2873/1434927162
+
+| Privacy Policy
+
+https://mkpage.microchip.com/e/1082123/gal-information-privacy-policy/2spy91/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8
+
+
+
+--PYTuDpPyhyJy=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Empower Your Innovation at Tech Insights Asia 2025</title>
+
+<style type="text/css">
+
+body {
+font-family: Helvetica, Arial, sans-serif;
+background-color: #F5F5F5;
+color: #555555;
+}
+
+a {
+color: #336699; 
+text-decoration: none; 
+}
+
+/*--- Preheader declaration in style block in addition to inline for Outlook */
+.preheader { display:none !important; visibility:hidden; opacity:0; max-width:0px; max-height:0px;  height:0; width:0;  overflow:hidden; font-size: 0px; line-height: 0px;}
+
+</style>
+</head>
+
+<body bgcolor="#F5F5F5" style="font-family: Helvetica, Arial, sans-serif; background-color: #F5F5F5; color: #555555;">
+<div class="preheader" style="display:none !important; visibility:hidden;  opacity:0; max-width:0px; max-height:0px; height:0; width:0; overflow:hidden; font-size: 0px; line-height: 0px;">Join us on March 25–26 for a two half-day live webinar series.</div>
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="F5F5F5" style="background-color: #F5F5F5;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" width="600">
+				<tbody>
+					<tr>
+						<td align="center" style="padding: 10px 0 0 0;  text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 13px; color: #555555; " valign="middle" class="">If you cannot read this email, please click <a href="https://mkpage.microchip.com/webmail/1082123/1434927162/de79482560a0572cc628978ea6eda600d4fe8e9ff6a4197c9cd860852e2c2873" style="color: #555555; text-decoration:underline;" target="_blank">here</a>.</td>
+					</tr>
+					<tr>
+						<td align="center" style="padding: 25px 0;" valign="middle" class=""><a href="https://mkpage.microchip.com/e/1082123/2025-02-26/2spy87/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" target="new"><img alt="Microchip Logo" height="48" src="https://client-data.knak.io/production/email_assets/5c5da47ee1625/5xGWpspkFfOuihcMbh7KXE5OlqppJtJzDLKCuktA.png" width="200"></a></td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle" class=""><a href="https://mkpage.microchip.com/e/1082123/com-event-TechInsightsAsia2025/2spy8b/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" target="new"><img alt="Tech Insights Asia 2025" border="0" height="250" src="https://client-data.knak.io/production/email_assets/5c5da47ee1625/7w1viCd19Au0Sf9kcXanGyqGMNyul2FgMhZmL2cI.jpg" style="display:block;" width="600"></a></td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" style="padding: 20px 20px 30px 20px; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 21px; color: #555555; font-weight: normal;" class="">Join our virtual series, Tech Insights Asia 2025, on March 25–26 for a two half-day live webinar series presented by our subject matter experts to empower your innovation and elevate your design to the next level.<br>
+						<br>
+						Explore our latest technologies in security, IoT, microcontrollers as well as SiC solutions. Our experts will be available to answer your questions during the Q&amp;A session. No matter where you are in your design journey, be sure to take this opportunity to gain insights from this free and educational virtual series.<br>
+						<br>
+						View our schedule below and secure your spot today:<br>
+						&nbsp;
+						<table border="1" bordercolor="#949A90" cellpadding="0" cellspacing="0" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; color: #555555; font-weight: normal; border-collapse:collapse; border-color: #949A90" width="560">
+							<tbody>
+								<tr><!--[if mso]>
+<td width="0" style="border-top: 0 solid #ffffff;border-right: 0 solid #ffffff;border-bottom: 0 solid #ffffff;border-left: 0 solid #ffffff;padding: 0 0 0 0;"></td>
+<![endif]-->
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #ffffff; font-weight: bold; background-color: #41b6e6" width="80" class="">Date</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #ffffff; font-weight: bold; background-color: #41b6e6; border-left: solid 1px #949A90;" width="100" class="">Theme</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #ffffff; font-weight: bold; background-color: #41b6e6; border-left: solid 1px #949A90;" width="90" class="">Time (IST)</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #ffffff; font-weight: bold; background-color: #41b6e6; border-left: solid 1px #949A90;" width="290" class="">Topic</td>
+								</tr>
+								<tr><!--[if mso]>
+<td width="0" style="border-top: 0 solid #ffffff;border-right: 0 solid #ffffff;border-bottom: 0 solid #ffffff;border-left: 0 solid #ffffff;padding: 0 0 0 0;"></td>
+<![endif]-->
+									<td rowspan="2" style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="80" class="">Mar 25 (Tue)</td>
+									<td rowspan="2" style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="100" class="">Security/IoT</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="90" class="">10:30 AM –<br>
+									11:20 AM</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal;" width="290" class="">Enabling Industrial Edge Solutions with PolarFire<sup>®</sup> SoC FPGA and OPC UA Integration</td>
+								</tr>
+								<tr><!--[if mso]>
+<td width="0" style="border-top: 0 solid #ffffff;border-right: 0 solid #ffffff;border-bottom: 0 solid #ffffff;border-left: 0 solid #ffffff;padding: 0 0 0 0;"></td>
+<![endif]-->
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="90" class="">11:30 AM –<br>
+									12:20 PM</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal;" width="290" class="">Simplify IoT Connectivity with Microchip Network Controllers</td>
+								</tr>
+								<tr><!--[if mso]>
+<td width="0" style="border-top: 0 solid #ffffff;border-right: 0 solid #ffffff;border-bottom: 0 solid #ffffff;border-left: 0 solid #ffffff;padding: 0 0 0 0;"></td>
+<![endif]-->
+									<td rowspan="2" style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="80" class="">Mar 26 (Wed)</td>
+									<td rowspan="2" style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="100" class="">Enhancing<br>
+									Your Designs</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="90" class="">10:30 AM –<br>
+									11:20 AM</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal;" width="290" class="">State-of-The-Art Secure Microcontrollers</td>
+								</tr>
+								<tr><!--[if mso]>
+<td width="0" style="border-top: 0 solid #ffffff;border-right: 0 solid #ffffff;border-bottom: 0 solid #ffffff;border-left: 0 solid #ffffff;padding: 0 0 0 0;"></td>
+<![endif]-->
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal; white-space:nowrap;" width="90" class="">11:30 AM –<br>
+									12:20 PM</td>
+									<td style="padding: 5px 5px 5px 5px;text-align:left;vertical-align:top;font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #555555; font-weight: normal;" width="290" class="">Jump Start Your DC Fast Charger Designs with mSiC™ Solutions</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 14px; color: #555555; font-weight: normal;" width="560">
+							<tbody>
+								<tr>
+									<td style="text-align:left;vertical-align:top;padding-top:10px; font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 14px; color: #555555; font-weight: normal;" class=""><span style="font-family: Helvetica, Arial, sans-serif;color: #555555;font-weight:normal;font-style:italic;">* This webinar series will be available in India, ASEAN, Australia and New Zealand, please note the time difference to attend the webinar.</span></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" style="padding: 0px 20px 30px 20px; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 21px; color: #555555; font-weight: normal;">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="140">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#41b6e6" height="35" style="border: none; border-radius: 4px; height: 35px;" valign="middle" class=""><a href="https://mkpage.microchip.com/e/1082123/com-event-TechInsightsAsia2025/2spy8b/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" style="color: #ffffff;  font-family: Helvetica, Arial, sans-serif; font-size: 16px; text-decoration: none;" target="new">Register Now</a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="padding: 20px 0 5px 0;">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; color: #555555;" valign="top" class=""><b>Microchip Technology Incorporated</b><br>
+									<a href="https://mkpage.microchip.com/e/1082123/2025-02-26/2spy87/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" style="color: #555555;
+text-decoration: underline;" target="new">www.microchip.com</a>&nbsp;|&nbsp; <a href="mailto:asia.inquiry@microchip.com" style="color: #555555;
+text-decoration: underline;" target="new">asia.inquiry@microchip.com</a></td>
+									<td align="right" valign="top">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tbody>
+											<tr>
+												<td style="padding-right: 10px" class=""><a href="https://mkpage.microchip.com/e/1082123/microchiptechnology/2spy8f/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" target="new"><img alt="Facebook Icon" height="40" src="https://client-data.knak.io/production/email_assets/5c5da47ee1625/0DybAN6oxYetX4eCwcquTbdWI8yRIAmH3H5cjFhl.png" width="40"></a></td>
+												<td style="padding-right: 10px" class=""><a href="https://mkpage.microchip.com/e/1082123/company-microchip-technology/2spy8j/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" target="new"><img alt="LinkedIn Icon" height="40" src="https://client-data.knak.io/production/email_assets/5c5da47ee1625/LEOZyj6vIM9curkPRhSRhel9kR7XEJYVgtjny9wI.png" width="40"></a></td>
+												<td style="padding-right: 10px" class=""><a href="https://mkpage.microchip.com/e/1082123/MicrochipTech/2spy8m/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" target="new"><img alt="X Icon" height="40" src="https://client-data.knak.io/production/email_assets/5c5da47ee1625/edfBgs9tucfrdMHxQNfu02J8qGzBRvYL2lB2x1Aj.png" width="40"></a></td>
+												<td style="padding-right: 10px" class=""><a href="https://mkpage.microchip.com/e/1082123/user-MicrochipTechnology/2spy8q/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" target="new"><img alt="Youtube Icon" height="40" src="https://client-data.knak.io/production/email_assets/5c5da47ee1625/m6rl7vg4Fex3S55nF9rrdV4svteCj5YqlSXwLLIU.png" width="40"></a></td>
+												<td class=""><a href="https://mkpage.microchip.com/e/1082123/2025-02-26/2spy8t/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" target="new"><img alt="Microchip Direct Icon" height="40" src="https://client-data.knak.io/production/email_assets/5c5da47ee1625/3E4asC9hAOLpGD07nxuF1bfXVp3objwBY56syVHQ.png" width="40"></a></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle" class="">
+						<hr style="height:1px; border-width:0; color: #CCCCCC; background-color: #CCCCCC"></td>
+					</tr>
+					<tr>
+						<td style="padding:5px 0 20px 0; text-align: left; font-family: Helvetica, Arial, sans-serif; font-size:11px; line-height:13px; color: #555555;" class="">This email is sent to you by Microchip Technology. The Microchip name and logo, the Microchip logo and PolarFire are registered trademarks of Microchip Technology Incorporated in the U.S.A. and other countries. mSiC is a trademark of Microchip Technology Incorporated in the U.S.A. and other countries. All other trademarks mentioned herein are the property of their respective companies. ©2025 Microchip Technology Inc. and its subsidiaries. All rights reserved. Microchip Technology HK Ltd. | 3707-14, Tower 6, The Gateway, Harbour City | Hong Kong.<br>
+						<br>
+						<a href="https://mkpage.microchip.com/e/1082123/l-1082123-2024-12-20-2sdh5g/2spy8x/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" style="color: #555555; text-decoration: underline;" target="new">Update Email Preferences</a> | <a href="https://mkpage.microchip.com/unsubscribeConfirm/1082123/de79482560a0572cc628978ea6eda600d4fe8e9ff6a4197c9cd860852e2c2873/1434927162" style="color: #555555; text-decoration: underline;" target="new">Unsubscribe</a> | <a href="https://mkpage.microchip.com/e/1082123/gal-information-privacy-policy/2spy91/1434927162/h/0bfTQQ1tt8fXnp0lSnJu_Mwc-n1eQOI85VEhVPrRxm8" style="color: #555555; text-decoration: underline;" target="new">Privacy Policy</a></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<img alt="" src="https://mkpage.microchip.com/r/1082123/1/1434927162/open/1" /><style data-ignore-inlining> 
+@media (prefers-color-scheme: dark) { #_t::before {content:url('https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?rd&d=[UNIQUE]');}} 
+@media (prefers-color-scheme: light) { #_t::before {content:url('https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?rl&d=[UNIQUE]');}} 
+@media print{ #_t {background-image:url('https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?p&d=[UNIQUE]');}} 
+div.OutlookMessageHeader {background-image:url('https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?f&d=[UNIQUE]')} 
+table.moz-email-headers-table {background-image:url('https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?f&d=[UNIQUE]')} 
+blockquote #_t {background-image:url('https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?f&d=[UNIQUE]')} 
+#MailContainerBody #_t {background-image:url('https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?f&d=[UNIQUE]')} 
+</style><div id="_t"></div>
+<img src="https://n4ih4v7i.emltrk.com/v2/n4ih4v7i?d=[UNIQUE]" width="1" height="1" border="0" alt="" /></body>
+</html>
+
+--PYTuDpPyhyJy=_?:--
+
